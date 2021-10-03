@@ -48,8 +48,14 @@
     console.log(document.getElementById('pelement').textContent.indexOf('元素'))
     console.log(document.getElementById('pelement').textContent.lastIndexOf('元素'))
 
-    // 检索字符串中的字符串 search()
+    // 检索字符串中的字符串 search() match() includes() startsWith() endsWith()
     console.log(document.getElementById('pelement').textContent.search('元素'))
+    console.log(document.getElementById('pelement').textContent.match(/元素/g))
+    console.log(document.getElementById('pelement').textContent.includes('元素'))
+    console.log(document.getElementById('pelement').textContent.startsWith('元素'))
+    console.log(document.getElementById('pelement').textContent.endsWith('元素'))
+
+
 
     // 提取部分字符串
     // 提取字符串的某个部分并在新字符串中返回被提取的部分 slice() substring() substr()
