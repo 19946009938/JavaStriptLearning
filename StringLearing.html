@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="statics/js/String.js" type="text/javascript"></script>
+    <title>字符串方法</title>
+</head>
+<body>
+
+
+<p id="pelement"></p>
+
+<p id="secondpelemnt"></p>
+
+<p id="thirdpelemnt"></p>
+
+<p id="fourthelement"></p>
+
+<p id="fifthelement"></p>
+
+<p id="sixthelement"></p>
+
+<p id="seventhelement"></p>
+
+<p id="eightelement"></p>
+
+</body>
+
+<script>
+    // 给元素添加内容
+    document.getElementById('pelement').innerHTML = addInnerHtml()
+
+    // 元素文本字符串长度 length
+    console.log(document.getElementById('pelement').textContent.length)
+
+    // 查找字符串中的字符串 indexOf() LastIndexOf()
+    console.log(document.getElementById('pelement').textContent.indexOf('元素'))
+    console.log(document.getElementById('pelement').textContent.lastIndexOf('元素'))
+
+    // 检索字符串中的字符串
+    console.log(document.getElementById('pelement').textContent.search('元素'))
+
+    // 提取部分字符串
+    // 提取字符串的某个部分并在新字符串中返回被提取的部分 slice() substring()
+    document.getElementById('secondpelemnt').innerHTML =
+        document.getElementById('pelement').textContent.slice(5, 9)
+
+    document.getElementById('thirdpelemnt').innerHTML =
+        document.getElementById('pelement').textContent.substring(5, 9)
+
+    document.getElementById('fourthelement').innerHTML =
+        document.getElementById('pelement').textContent.substr(5, 9)
+
+
+    // 替换字符串内容 replace,只替换首个匹配
+    document.getElementById('fifthelement').innerHTML =
+        document.getElementById('pelement').textContent.replace(/元素/i,'垃圾')
+
+    // 替换字符串内容 replace,正则表达式/g替换所有匹配
+    document.getElementById('sixthelement').innerHTML =
+        document.getElementById('pelement').textContent.replace(/元素/g,'垃圾')
+
+    // 大小写转换
+    document.getElementById('seventhelement').innerHTML =
+        document.getElementById('pelement').textContent.toUpperCase()
+    document.getElementById('eightelement').innerHTML =
+        document.getElementById('pelement').textContent.toLowerCase()
+
+
+
+
+</script>
+</html>
