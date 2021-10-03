@@ -27,6 +27,10 @@
 
 <p id="eightelement"></p>
 
+<p id="ninthelement"></p>
+
+<p id="tenthelement"></p>
+
 </body>
 
 <script>
@@ -57,17 +61,24 @@
 
     // 替换字符串内容 replace,只替换首个匹配
     document.getElementById('fifthelement').innerHTML =
-        document.getElementById('pelement').textContent.replace(/元素/i,'垃圾')
+        document.getElementById('pelement').textContent.replace(/元素/i, '垃圾')
 
     // 替换字符串内容 replace,正则表达式/g替换所有匹配
     document.getElementById('sixthelement').innerHTML =
-        document.getElementById('pelement').textContent.replace(/元素/g,'垃圾')
+        document.getElementById('pelement').textContent.replace(/元素/g, '垃圾')
 
     // 大小写转换
     document.getElementById('seventhelement').innerHTML =
         document.getElementById('pelement').textContent.toUpperCase()
     document.getElementById('eightelement').innerHTML =
         document.getElementById('pelement').textContent.toLowerCase()
+
+    // 字符串拼接 concat()
+    document.getElementById('ninthelement').innerHTML =
+        document.getElementById('pelement').textContent.concat('   ', document.getElementById('secondpelemnt').textContent,'                 ')
+
+    // 删除字符串两端的空白符 trim
+    document.getElementById('tenthelement').innerHTML =document.getElementById('ninthelement').textContent.trim()
 
 
 
