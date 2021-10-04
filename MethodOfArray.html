@@ -31,7 +31,6 @@
 <p id="n20"></p>
 
 
-
 </body>
 
 <script>
@@ -60,25 +59,33 @@
     document.getElementById('n9').innerHTML = `unshift()后的返回值:${UnshiftFruits}`
     document.getElementById('n10').innerHTML = `unshift()后的结果:${fruits}`
 
-    fruits[0]='Watermelon'
-    document.getElementById('n11').innerHTML=`使用索引下标更改元素：${fruits}`
+    fruits[0] = 'Watermelon'
+    document.getElementById('n11').innerHTML = `使用索引下标更改元素：${fruits}`
 
-    fruits[fruits.length-2]='Wiki'
-    document.getElementById('n12').innerHTML=`使用length追加最后一个元素：${fruits}`
+    fruits[fruits.length - 2] = 'Wiki'
+    document.getElementById('n12').innerHTML = `使用length追加最后一个元素：${fruits}`
 
     // delete fruits[0]
     // document.getElementById('n13').innerHTML=`使用delete函数删除元素：${fruits}`
 
-    var SpliceFruits = fruits.splice(1,0,'第一种水果','第二种水果')
-    document.getElementById('n14').innerHTML=`使用splice()方法指定位置添加元素：${fruits}`
+    var SpliceFruits = fruits.splice(1, 0, '第一种水果', '第二种水果')
+    document.getElementById('n14').innerHTML = `使用splice()方法指定位置添加元素：${fruits}`
 
     var myBoys = ["Emil", "Tobias", "Linus"];
     var ConcatFruits = fruits.concat(myBoys)
-    document.getElementById('n15').innerHTML=`使用concat()函数拼接数组：${ConcatFruits}`
+    document.getElementById('n15').innerHTML = `使用concat()函数拼接数组：${ConcatFruits}`
 
-    var SliceFruits = fruits.slice(1,3)
-    document.getElementById('n16').innerHTML=`使用slice()函数切片数组：${SliceFruits}`
+    var SliceFruits = fruits.slice(1, 3)
+    document.getElementById('n16').innerHTML = `使用slice()函数切片数组：${SliceFruits}`
 
+    var txt = '使用forEach()函数对数组进行遍历：<br>'
+
+    fruits.forEach(function1)
+    function function1(value, index, array) {
+        txt = txt + value + '<br>';
+    }
+
+    document.getElementById('n17').innerHTML = txt
 
 </script>
 </html>
