@@ -9,5 +9,76 @@
 </head>
 <body>
 
+<p id="n1"></p>
+<p id="n2"></p>
+<p id="n3"></p>
+<p id="n4"></p>
+<p id="n5"></p>
+<p id="n6"></p>
+<p id="n7"></p>
+<p id="n8"></p>
+<p id="n9"></p>
+<p id="n10"></p>
+<p id="n11"></p>
+<p id="n12"></p>
+<p id="n13"></p>
+<p id="n14"></p>
+<p id="n15"></p>
+<p id="n16"></p>
+<p id="n17"></p>
+<p id="n18"></p>
+<p id="n19"></p>
+<p id="n20"></p>
+
+
+
 </body>
+
+<script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+    // toString()
+    document.getElementById('n1').innerHTML = `使用toString()函数后结果：${fruits.toString()}`
+
+    // 指定分隔符 join('分隔符')
+    document.getElementById('n2').innerHTML = `使用join(*)后的结果：${fruits.join('*')}`
+
+    // pop() && push() && shift()删除第一个元素
+    var PopFruits = fruits.pop()
+    document.getElementById('n3').innerHTML = `pop()后的返回值:${PopFruits}`
+    document.getElementById('n4').innerHTML = `pop()后的结果:${fruits}`
+
+    var PushFruits = fruits.push('pear')
+    document.getElementById('n5').innerHTML = `push()后的返回值:${PushFruits}`
+    document.getElementById('n6').innerHTML = `push()后的结果:${fruits}`
+
+    var ShiftFruits = fruits.shift()
+    document.getElementById('n7').innerHTML = `shift()后的返回值:${ShiftFruits}`
+    document.getElementById('n8').innerHTML = `shift()后的结果:${fruits}`
+
+    var UnshiftFruits = fruits.unshift('Lemon')
+    document.getElementById('n9').innerHTML = `unshift()后的返回值:${UnshiftFruits}`
+    document.getElementById('n10').innerHTML = `unshift()后的结果:${fruits}`
+
+    fruits[0]='Watermelon'
+    document.getElementById('n11').innerHTML=`使用索引下标更改元素：${fruits}`
+
+    fruits[fruits.length-2]='Wiki'
+    document.getElementById('n12').innerHTML=`使用length追加最后一个元素：${fruits}`
+
+    // delete fruits[0]
+    // document.getElementById('n13').innerHTML=`使用delete函数删除元素：${fruits}`
+
+    var SpliceFruits = fruits.splice(1,0,'第一种水果','第二种水果')
+    document.getElementById('n14').innerHTML=`使用splice()方法指定位置添加元素：${fruits}`
+
+    var myBoys = ["Emil", "Tobias", "Linus"];
+    var ConcatFruits = fruits.concat(myBoys)
+    document.getElementById('n15').innerHTML=`使用concat()函数拼接数组：${ConcatFruits}`
+
+    var SliceFruits = fruits.slice(1,3)
+    document.getElementById('n16').innerHTML=`使用slice()函数切片数组：${SliceFruits}`
+
+
+</script>
 </html>
