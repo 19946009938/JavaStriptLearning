@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>时间设置</title>
+
+    <script src="statics/laydate/laydate.js"></script>
+
+</head>
+
+<body>
+<div id="#test1"></div>
+<input type="text" id="startdate" placeholder="这里输入开始时间">
+<input type="text" id="finishdate" placeholder="这里输入结束时间">
+</body>
+
+<script>
+    laydate.render({
+        elem: '#startdate',
+        value: '2021-07-01'
+    })
+
+    laydate.render({
+        elem:'#finishdate',
+        value:'2021-08-01'
+    })
+
+</script>
+</html>
